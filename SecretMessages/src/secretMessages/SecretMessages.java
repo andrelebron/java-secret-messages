@@ -17,7 +17,7 @@ public class SecretMessages extends JFrame {
 				System.out.println("Enter a secret key (-25 to 25):");
 				int keyVal = Integer.parseInt(scan.nextLine());		//Prompt user for key
 				char key = (char)keyVal;
-				for(int x = 0; x < message.length(); x++) {			//For each character in the message...
+				for(int x = message.length() - 1; x >= 0; x--) {			//For each character in the message...
 					char input = message.charAt(x);
 					if (input >= 'A' && input <= 'Z') {				//Capital letters are shifted to capital letters
 						input += key;
